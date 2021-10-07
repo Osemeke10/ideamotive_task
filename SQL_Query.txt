@@ -1,0 +1,14 @@
+For the SQL.
+This query assumes that the database is test.csv.
+
+(4i).SELECT 
+reclass,
+AVG(mass) as Avg_mass
+FROM test.csv 
+Group by reclass
+Order by Avg_mass DESC;
+
+(4ii)SELECT 
+reclass, mass, mass *10 AS weight, AVG(weight) AS avg_weight 
+FROM test.csv
+GROUP BY reclass, avg_weight<5000;
